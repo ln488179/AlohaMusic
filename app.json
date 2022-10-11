@@ -1,10 +1,10 @@
 {
   "expo": {
     "name": "AlohaMusic",
-    "slug": "AlohaMusic",
+    "slug": "alohamusic-ln488179",
     "version": "1.0.0",
     "orientation": "portrait",
-    "icon": "./assets/alohaIcon.jpg",
+    "icon": "./assets/alohaIcon.png",
     "userInterfaceStyle": "light",
     "splash": {
       "image": "./assets/hawaii.png",
@@ -28,6 +28,7 @@
     },
     "web": {
       "favicon": "./assets/favicon.png"
-    }
+    },
+    "description": ""
   }
 }
