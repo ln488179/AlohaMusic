@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-//import { Audio } from 'expo';
 import { Audio, InterruptionModeAndroid, InterruptionModeIOS } from 'expo-av';
 import { Feather } from '@expo/vector-icons';
 import { Image, StyleSheet, Text, TouchableOpacity, View } from 'react-native';
@@ -16,7 +15,6 @@ export default class App extends Component {
     isPlayingD: false,
     playbackInstance: null,
     volume: 1.0,
-    filePath: './music/ukulele.mp3',
     isBuffering: false,
   }
   
@@ -28,9 +26,6 @@ export default class App extends Component {
       playsInSilentModeIOS: true,
       shouldDuckAndroid: true,
       interruptionModeAndroid: InterruptionModeAndroid.DoNotMix,
-    });
-    this.setState({
-      filePath: './music/ukulele.mp3',
     });
     this.loadAudio();
   }
@@ -98,7 +93,6 @@ export default class App extends Component {
     const playbackInstance = new Audio.Sound();
     const source = require('./music/ukulele.mp3');
 		const status = {
-			shouldPlay: this.state.isPlayingU,
 			volume: this.state.volume,
     };
     playbackInstance.setOnPlaybackStatusUpdate(this.onPlaybackStatusUpdate);
